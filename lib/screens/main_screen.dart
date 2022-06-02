@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:countries_api/models/countries_model.dart';
 import 'package:countries_api/screens/country_detail.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 
@@ -63,7 +64,11 @@ class _MainScreenState extends State<MainScreen> {
                         style: TextStyle(color: Colors.white),
                       ),
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (_) => CountryDetail(model: list[index])));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) =>
+                                    CountryDetail(model: list[index])));
                       },
                     ),
                   );
